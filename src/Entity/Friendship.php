@@ -31,6 +31,11 @@ class Friendship
      */
     private $enable;
 
+    public function __construct()
+    {
+        $this->setEnable(false);
+    }
+
     public function getId(): ?int
     {
         return $this->id;

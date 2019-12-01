@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Script{% endblock %}
+
+{% block body %}
+    <h1>Edit Script</h1>
+
+    {{ include('script/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('script_index') }}">back to list</a>
+
+    {{ include('script/_delete_form.html.twig') }}
+{% endblock %}

@@ -58,8 +58,11 @@ class Star
         return $this->albums;
     }
 
-    public function addAlbum(Album $album): self
+    public function addAlbum(Album $album = null): self
     {
+        if(null == $album){
+            return $this;
+        }
         if (!$this->albums->contains($album)) {
             $this->albums[] = $album;
             $album->setStar($this);

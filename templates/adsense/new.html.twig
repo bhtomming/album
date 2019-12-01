@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Adsense{% endblock %}
+
+{% block body %}
+    <h1>Create new Adsense</h1>
+
+    {{ include('adsense/_form.html.twig') }}
+
+    <a href="{{ path('adsense_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,81 @@
+sonata_admin:
+    title: 'Sonata Admin'
+    dashboard:
+        blocks:
+            - { type: sonata.admin.block.admin_list, position: left }
+ #   breadcrumbs:
+ #       child_admin_route: edit
+
+
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+
+
+services:
+    admin.album:
+        class: App\Admin\AlbumAdmin
+        arguments: [ ~, App\Entity\Album, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '相册' }
+
+    admin.image:
+        class: App\Admin\PictureAdmin
+        arguments: [ ~, App\Entity\Picture, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '图片' }
+
+    admin.star:
+        class: App\Admin\StarAdmin
+        arguments: [~, App\Entity\Star,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '明星' }
+
+    admin.category:
+        class: App\Admin\CategoryAdmin
+        arguments: [~, App\Entity\Category, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '分类' }
+
+    admin.settings:
+        class: App\Admin\SettingsAdmin
+        arguments: [~, App\Entity\Settings ,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '网站设置' }
+
+    admin.navigation:
+        class: App\Admin\NavigationAdmin
+        arguments: [~, App\Entity\Navigation ,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '菜单设置' }
+
+    admin.friendship:
+        class: App\Admin\FriendshipAdmin
+        arguments: [~, App\Entity\Friendship ,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '友情链接' }
+
+    admin.meta:
+        class: App\Admin\MetaAdmin
+        arguments: [~, App\Entity\Meta ,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '验证管理' }
+
+    admin.script:
+        class: App\Admin\ScriptAdmin
+        arguments: [~, App\Entity\Script ,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '第三方代码' }
+
+    admin.lexicon:
+        class: App\Admin\LexiconAdmin
+        arguments: [~, App\Entity\Lexicon,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '随机词组' }
+
+    admin.tags:
+        class: App\Admin\TagsAdmin
+        arguments: [~, App\Entity\Tags,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '标签管理' }

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Settings{% endblock %}
+
+{% block body %}
+    <h1>Settings</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ setting.id }}</td>
+            </tr>
+            <tr>
+                <th>SiteName</th>
+                <td>{{ setting.siteName }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ setting.keywords ? setting.keywords|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ setting.description }}</td>
+            </tr>
+            <tr>
+                <th>CopyRight</th>
+                <td>{{ setting.copyRight }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ setting.email }}</td>
+            </tr>
+            <tr>
+                <th>Beian</th>
+                <td>{{ setting.beian }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ setting.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('settings_index') }}">back to list</a>
+
+    <a href="{{ path('settings_edit', {'id': setting.id}) }}">edit</a>
+
+    {{ include('settings/_delete_form.html.twig') }}
+{% endblock %}

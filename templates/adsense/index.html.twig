@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Adsense index{% endblock %}
+
+{% block body %}
+    <h1>Adsense index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Region</th>
+                <th>Codes</th>
+                <th>Enable</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for adsense in adsenses %}
+            <tr>
+                <td>{{ adsense.id }}</td>
+                <td>{{ adsense.name }}</td>
+                <td>{{ adsense.region }}</td>
+                <td>{{ adsense.codes }}</td>
+                <td>{{ adsense.enable ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('adsense_show', {'id': adsense.id}) }}">show</a>
+                    <a href="{{ path('adsense_edit', {'id': adsense.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('adsense_new') }}">Create new</a>
+{% endblock %}

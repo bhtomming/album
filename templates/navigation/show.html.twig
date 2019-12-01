@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Navigation{% endblock %}
+
+{% block body %}
+    <h1>Navigation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ navigation.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ navigation.name }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ navigation.keywords }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ navigation.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('navigation_index') }}">back to list</a>
+
+    <a href="{{ path('navigation_edit', {'id': navigation.id}) }}">edit</a>
+
+    {{ include('navigation/_delete_form.html.twig') }}
+{% endblock %}

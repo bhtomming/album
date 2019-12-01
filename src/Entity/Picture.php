@@ -3,12 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PictureRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Picture
 {
+    const SERVER_PATH_TO_IMAGE_FOLDER = 'upload/images/';
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -49,9 +53,28 @@ class Picture
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Album", inversedBy="pictures")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $album;
+
+    private $file;
+
+    public function __construct()
+    {
+        $current = new \DateTime('now');
+        $this->setCreatedAt($current);
+        $this->setUpdatedAt($current);
+    }
+
+    public function setFile(UploadedFile $uploadedFile = null)
+    {
+        $this->file = $uploadedFile;
+    }
+
+    public function getFile(): ?UploadedFile
+    {
+        return $this->file;
+    }
 
     public function getId(): ?int
     {
@@ -141,5 +164,46 @@ class Picture
         $this->album = $album;
 
         return $this;
+    }
+
+    public function upload()
+    {
+        if($this->getFile() == null){
+            return;
+        }
+
+        $this->getFile()->move(
+            self::SERVER_PATH_TO_IMAGE_FOLDER,
+            $this->getFile()->getClientOriginalName()
+        );
+        $this->name = $this->getFile()->getClientOriginalName();
+
+        $this->setFile(null);
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function fileUpload()
+    {
+        $this->upload();
+    }
+
+    public function refreshUpdated()
+    {
+        $this->setUpdatedAt(new \DateTime());
+    }
+
+    public function getReview()
+    {
+        return "<img src=\"/".$this->getWebPath()."\" />";
+    }
+
+    public function getWebPath()
+    {
+        $times = $this->getCreatedAt();
+        $dateDir = $times->format("Y")."/".$times->format("m")."/".$times->format("d");
+        return self::SERVER_PATH_TO_IMAGE_FOLDER.$dateDir."/".$this->getName();
     }
 }

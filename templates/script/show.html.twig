@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Script{% endblock %}
+
+{% block body %}
+    <h1>Script</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ script.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ script.name }}</td>
+            </tr>
+            <tr>
+                <th>Codes</th>
+                <td>{{ script.codes }}</td>
+            </tr>
+            <tr>
+                <th>Enable</th>
+                <td>{{ script.enable ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('script_index') }}">back to list</a>
+
+    <a href="{{ path('script_edit', {'id': script.id}) }}">edit</a>
+
+    {{ include('script/_delete_form.html.twig') }}
+{% endblock %}

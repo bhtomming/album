@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Star{% endblock %}
+
+{% block body %}
+    <h1>Create new Star</h1>
+
+    {{ include('star/_form.html.twig') }}
+
+    <a href="{{ path('star_index') }}">back to list</a>
+{% endblock %}

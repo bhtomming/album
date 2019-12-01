@@ -45,7 +45,7 @@ class Album
     private $star;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Picture", mappedBy="album", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Picture", mappedBy="album", orphanRemoval=true,cascade={"persist"})
      */
     private $pictures;
 
@@ -129,6 +129,7 @@ class Album
 
     public function addPicture(Picture $picture): self
     {
+
         if (!$this->pictures->contains($picture)) {
             $this->pictures[] = $picture;
             $picture->setAlbum($this);
@@ -148,5 +149,10 @@ class Album
         }
 
         return $this;
+    }
+
+    public function getCounterPictures()
+    {
+        return $this->pictures->count();
     }
 }

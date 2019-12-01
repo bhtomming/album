@@ -25,3 +25,12 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    app.cat:
+        class: App\Servers\Cat
+        arguments:
+            - '@service_container'
+
+    App\Command\CatCommand:
+        arguments:
+            - '@app.cat'
