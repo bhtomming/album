@@ -3,8 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Album;
+use App\Entity\Category;
+use App\Entity\Star;
 use App\Form\AlbumType;
 use App\Repository\AlbumRepository;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Adapter\DoctrineCollectionAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,75 +25,56 @@ class AlbumController extends AbstractController
      */
     public function index(AlbumRepository $albumRepository): Response
     {
+        $em = $this->getDoctrine()->getManager();
+        $mainCates = $em->getRepository(Category::class)->findBy(['parent'=>null]);
+
+        $Stars = $em->getRepository(Star::class)->findBy([],[],20);
+
         return $this->render('album/index.html.twig', [
-            'albums' => $albumRepository->findAll(),
+            'albums' => $albumRepository->findBy(['isPublished'=>true]),
+            'mainCates' => $mainCates,
+            'stars' =>$Stars,
         ]);
     }
 
     /**
-     * @Route("/new", name="album_new", methods={"GET","POST"})
+     * @Route("/hua",name="mingxin")
+     * @return Response
      */
-    public function new(Request $request): Response
+    public function mingXing()
     {
-        $album = new Album();
-        $form = $this->createForm(AlbumType::class, $album);
-        $form->handleRequest($request);
+        return $this->getByCategory("植物图片");
+    }
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($album);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('album_index');
-        }
-
-        return $this->render('album/new.html.twig', [
-            'album' => $album,
-            'form' => $form->createView(),
+    public function getByCategory($category)
+    {
+        $category = $this->getDoctrine()->getRepository(Category::class)->findOneBy(['name'=>$category]);
+        $albums = $this->getDoctrine()->getRepository(Album::class)->findBy(['category'=>$category]);
+        return $this->render('album/index.html.twig',[
+            'albums' => $albums,
         ]);
     }
+
+
 
     /**
      * @Route("/{id}", name="album_show", methods={"GET"})
+     *@Route("/{id}", name="album_page", methods={"GET"},defaults={"page": "1"},requirements={"page": "[1-9]\d*"})
      */
-    public function show(Album $album): Response
+    public function show(Request $request,Album $album): Response
     {
+        $adapter = new DoctrineCollectionAdapter($album->getPictures());
+
+
+        $page = $request->get('page')?:1;
+        $pagefan = new Pagerfanta($adapter);
+        $pagefan->setMaxPerPage(1);
+        $pagefan->setCurrentPage($page);
+
+
         return $this->render('album/show.html.twig', [
             'album' => $album,
+            'pics' =>$pagefan,
         ]);
-    }
-
-    /**
-     * @Route("/{id}/edit", name="album_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, Album $album): Response
-    {
-        $form = $this->createForm(AlbumType::class, $album);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('album_index');
-        }
-
-        return $this->render('album/edit.html.twig', [
-            'album' => $album,
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="album_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, Album $album): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$album->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($album);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('album_index');
     }
 }

@@ -1,0 +1,21 @@
+knp_menu:
+  # use "twig: false" to disable the Twig extension and the TwigRenderer
+    twig:
+        template: "@KnpMenu/menu.html.twig"
+  #  if true, enables the helper for PHP templates
+    templating: false
+  # the renderer to use, list is also available by default
+    default_renderer: twig
+
+
+services:
+    app.menu_builder:
+        class: App\Menu\Menubuilder
+        arguments: ["@knp_menu.factory","@service_container"]
+
+    app.main_menu:
+        class: Knp\Menu\MenuItem
+        factory: ["@app.menu_builder",mainMenu]
+        arguments: ["@request_stack"]
+        tags:
+            - { name: knp_menu.menu, alias: main }

@@ -1,13 +1,13 @@
 {#<div class="col-md-10 col-lg-8 p-b-20">#}
     <div class="how2 how2-cl4 flex-s-c m-r-10 m-r-0-sr991">
         <h3 class="f1-m-2 cl3 tab01-title">
-            最新内容
+            {{ name }}
         </h3>
     </div>
 
     <div class="row p-t-35">
         {% for album in albums %}
-        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+        <div class="col-sm-6 {{ col == 2 ? "p-r-25 p-r-15-sr991" : "col-md-4" }} ">
             <!-- Item latest -->
             <div class="m-b-45">
                 <a href="{{ path("album_show",{"id":album.id}) }}" class="wrap-pic-w hov1 trans-03">

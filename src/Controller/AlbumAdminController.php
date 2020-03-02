@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class CRUDController extends BaseController
+class AlbumAdminController extends BaseController
 {
     public function batchActionPublish(ProxyQueryInterface $proxyQuery, Request $request = null)
     {
@@ -43,8 +43,10 @@ class CRUDController extends BaseController
         try{
             foreach ($selectModels as $selectModel)
             {
-                $selectModel->setCreatedAt(new \DateTime('now'));
-
+                if(!$selectModel->getIsPublished()){
+                    $selectModel->setIsPublished(true);
+                }
+                //$selectModel->setViewed(random_int(100,99999));
                 $modelManager->update($selectModel);
             }
         }catch (\Exception $e){

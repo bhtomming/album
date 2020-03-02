@@ -35,6 +35,7 @@ class Category
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="categories")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $parent;
 
@@ -125,7 +126,7 @@ class Category
         return $this;
     }
 
-    public function removeCategory(self $category): self
+    public function removeCategory(?self $category): self
     {
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
@@ -133,6 +134,16 @@ class Category
             if ($category->getParent() === $this) {
                 $category->setParent(null);
             }
+        }
+        if(null == $category)
+        {
+            foreach ($this->categories as $category)
+            {
+                if ($category->getParent() === $this) {
+                    $category->setParent(null);
+                }
+            }
+            $this->categories->clear();
         }
 
         return $this;
@@ -167,6 +178,18 @@ class Category
         }
 
         return $this;
+    }
+
+    public function getPublishedAlbums()
+    {
+        $albums = new ArrayCollection();
+        foreach ($this->getAlbums() as $album)
+        {
+            if($album->getIsPublished()){
+                $albums->add($album);
+            }
+        }
+        return $albums;
     }
 
     public function __toString()

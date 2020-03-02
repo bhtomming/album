@@ -1,0 +1,65 @@
+<!-- Header -->
+{% set hassub = 0 %}
+<header>
+    <!-- Header desktop -->
+    <div class="container-menu-desktop">
+        <div class="topbar">
+            <div class="content-topbar container h-100">
+                <div class="left-topbar">
+
+                    {#{% set weather = getWeather(app.request.clientIp) %}#}
+                    <span class="left-topbar-item flex-wr-s-c">
+                        <span>
+                            {{ weather.city }}
+                        </span>
+                        <ul class="nav">
+                            <li class="left-topbar-item">{{ weather.wea }}</li>
+                            <li class="left-topbar-item">温度:{{ weather.tem }}度</li>
+                            <li class="left-topbar-item">湿度:{{ weather.humidity }}</li>
+                            <li class="left-topbar-item">风向:{{ weather.win }}</li>
+                        </ul>
+                        {#<span>
+
+                        </span>
+                        <span>
+
+
+
+                        </span>
+                        <span>
+
+
+                        </span>#}
+                    </span>
+                </div>
+            </div>
+        </div>
+        {% if hassub==1 %}
+        {{ include('default/mobile-menu.html.twig') }}
+        {% endif %}
+        <div class="wrap-logo container">
+            <!-- Logo desktop -->
+            <div class="logo">
+                <a href="/"><img src="{{ site.logoSrc|imagine_filter('list_sm') }}" alt="LOGO"></a>
+            </div>
+
+            <!-- Banner -->
+            {#<div class="banner-header">
+                <a href="/"><img src="#" alt="IMG"></a>
+            </div>#}
+        </div>
+        <!--  -->
+        <div class="wrap-main-nav">
+            <div class="main-nav">
+                <!-- Menu desktop -->
+                <nav class="menu-desktop">
+                    <a class="logo-stick" href="/">
+                        {#<img src="#" alt="LOGO">#}
+                    </a>
+                    {{ main_menu() }}
+                    {#{{ knp_menu_render("main",{'leaf_class':"main-menu-item","currentClass":"main-menu-active","branch_class":"sub-menu"}) }}#}
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Album;
+use App\Entity\Star;
 use App\Entity\Tags;
 use App\Form\TagsType;
 use App\Repository\TagsRepository;
@@ -26,69 +28,15 @@ class TagsController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="tags_new", methods={"GET","POST"})
-     */
-    public function new(Request $request): Response
-    {
-        $tag = new Tags();
-        $form = $this->createForm(TagsType::class, $tag);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($tag);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('tags_index');
-        }
-
-        return $this->render('tags/new.html.twig', [
-            'tag' => $tag,
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
      * @Route("/{id}", name="tags_show", methods={"GET"})
      */
     public function show(Tags $tag): Response
     {
+        $stars = $this->getDoctrine()->getRepository(Star::class)->findBy([],[],[10]);
         return $this->render('tags/show.html.twig', [
             'tag' => $tag,
+            'stars' => $stars,
         ]);
     }
 
-    /**
-     * @Route("/{id}/edit", name="tags_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, Tags $tag): Response
-    {
-        $form = $this->createForm(TagsType::class, $tag);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('tags_index');
-        }
-
-        return $this->render('tags/edit.html.twig', [
-            'tag' => $tag,
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="tags_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, Tags $tag): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$tag->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($tag);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('tags_index');
-    }
 }

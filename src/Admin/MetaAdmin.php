@@ -27,7 +27,8 @@ class MetaAdmin extends AbstractAdmin
                 'label' => '名称'
             ])
             ->add('enable','boolean',[
-                'label' => '是否有效'
+                'label' => '是否有效',
+                'editable' => true,
             ])
             ;
     }
@@ -35,16 +36,14 @@ class MetaAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form)
     {
         $form
-            ->add('name',null,[
+            ->add('name', null, [
                 'label' => '名称',
             ])
-            ->add('codes',TextareaType::class,[
+            ->add('codes', TextareaType::class, [
                 'label' => '代码',
             ])
-            ->add('enable',BooleanType::class,[
-                'label' => '是否有效'
-            ])
-            ;
+        ;
+
     }
 
 }

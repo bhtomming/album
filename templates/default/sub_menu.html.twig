@@ -1,5 +1,5 @@
-<ul class="sub-menu">
-    {% for sub_menu in sub_menues %}
+{% for sub_menu in sub_menues %}
+{{ loop.first ? "<ul class=\"sub-menu\">" : "" }}
     <li><a href="{{ sub_menu.link }}">{{ sub_menu.name }}</a></li>
-    {% endfor %}
-</ul>
+{{ loop.last ? "</ul>" : "" }}
+{% endfor %}

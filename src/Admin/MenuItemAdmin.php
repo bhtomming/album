@@ -10,91 +10,101 @@
 namespace App\Admin;
 
 
-use App\Entity\Picture;
+
+use App\Entity\Album;
+use App\Entity\Menu;
+use App\Entity\MenuItem;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
+use Sonata\Form\Type\CollectionType;
+use Sonata\AdminBundle\Form\Type\Filter\ChoiceType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
-class PictureAdmin extends AbstractAdmin
+
+class MenuItemAdmin extends AbstractAdmin
 {
 
     protected function configureFormFields(FormMapper $form)
     {
         $image = $this->getSubject();
         $fileFieldOptions['required'] = false;
-        $fileFieldOptions['label'] = '照片';
-        if ($image && ($webPath = $image->getWebPath())) {
-            // get the container so the full path to the image can be set
-           /* $container = $this->getConfigurationPool()->getContainer();
-            $fullPath = $container->get('request_stack')->getCurrentRequest()->getBasePath().'/'.$webPath;*/
 
-            // add a 'help' option containing the preview's img tag
-            $fileFieldOptions['help'] = '<img src="/'.$webPath.'" class="admin-preview"/>';
-        }
 
         $form
+            ->add('menu',EntityType::class,[
+                'class' => Menu::class,
+                'choice_label'=>'name',
+                'choice_value'=>'id',
+                'label' => '所属菜单'
+            ])
+            ->add('parent',EntityType::class,[
+                'class' => MenuItem::class,
+                'placeholder'=> '选择上级菜单',
+                'choice_label'=>'name',
+                'choice_value'=>'id',
+                'required' => false,
+                'label'=>'上级菜单'
+            ])
             ->add('name',null,[
-                'required'=>false,
-                'label'=>'文件名'
+                'required'=>true,
+                'label'=>'菜单名'
             ])
-            ->add('file',FileType::class,
-            $fileFieldOptions)
-            ->add('title',null,[
-                'label'=>'标题'
+            ->add('link',null, [
+                'label'=>'链接'
             ])
-            ->add('description',null,[
-                'label'=>'描述'
+            ->add('mega',EntityType::class,[
+                'class' => Album::class,
+                'multiple' => true,
+                'choice_label'=>'name',
+                'choice_value'=>'id',
             ])
-
         ;
     }
 
     protected function configureListFields(ListMapper $list)
     {
 
-        $list->addIdentifier('review','html',[
-            'label'=>'照片预览',
-            'header_style'=>"width: 100px; height: 100px;"
+        $list->addIdentifier('name','html',[
+            'label'=>'菜单名',
         ])
-            ->add('name',null,[
-            'label' => '图片名',
-        ])
-            ->add('title',null,[
-                'label' => '图片标题',
-            ])
-            ->add('keywords',null,[
-                'label' => '关键词',
-            ])
-            ->add('description',null,[
-                'label' => '图片描述'
-            ])
-            ->add('createdAt',null,[
-                'label' => '上传时间',
-                'format'=>'Y年m月d日 H:i:s',
-                'timezone' => 'Asia/Shanghai',
+            ->add('link',null,[
+                'label' => '链接',
             ])
         ;
 
     }
 
+    public function preRemove($object)
+    {
+        $megas = $object->getMega();
+        foreach ($megas as $mega)
+        {
+            $object->removeMega($mega);
+        }
+    }
+
     public function prePersist($object)
     {
-        $this->managerFile($object);
+        $this->saveMega($object);
     }
 
     public function preUpdate($object)
     {
-        $this->managerFile($object);
+        $this->saveMega($object);
     }
 
-    private function managerFile(Picture $image)
+    public function saveMega($object)
     {
-        if($image->getFile())
+        $albums = $object->getMega();
+        foreach ($albums as $album)
         {
-            $image->refreshUpdated();
+            $album->setMenuItem($object);
         }
+
     }
+
 
 }

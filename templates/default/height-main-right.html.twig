@@ -1,0 +1,35 @@
+{% set adv_img = "" %}
+        <!--  -->
+        <div>
+            <div class="how2 how2-cl4 flex-s-c">
+                <h3 class="f1-m-2 cl3 tab01-title">
+                    热门内容
+                </h3>
+            </div>
+
+            <ul class="p-t-35">
+                {% for hot_album in albums|sortBy("desc","viewed")|slice(0,10) %}
+                <li class="flex-wr-sb-s p-b-22">
+                    <div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+                        {{ loop.index }}
+                    </div>
+                    {% set adv_img = hot_album %}
+                    <a href="{{ path("album_show",{"id":hot_album.id}) }}" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+                        {{ hot_album.name }}
+                    </a>
+                </li>
+                    {% else %}
+                        <li class="flex-wr-sb-s p-b-22">没有数据</li>
+                {% endfor %}
+
+            </ul>
+        </div>
+
+        <!-- 广告 -->
+        {#<div class="flex-c-s p-t-8">
+            <a href="{{ path("album_show",{"id":adv_img.id}) }}">
+                <img class="max-w-full" src="{{ adv_img.pictures.0.webPath|imagine_filter("right_adv") }}" alt="IMG">
+            </a>
+        </div>#}
+
+

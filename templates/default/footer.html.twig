@@ -1,0 +1,81 @@
+<footer>
+    <div class="bg2 p-t-40 p-b-25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 p-b-20">
+                    <div class="size-h-3 flex-s-c">
+                        <a href="/">
+                            <img class="max-s-full" src="{{ site.footerSrc|imagine_filter('list_sm') }}" alt="LOGO">
+                        </a>
+                    </div>
+
+                    <div>
+                        <p class="f1-s-1 cl11 p-b-16">
+                            {{ site.summary }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 p-b-20">
+                    <div class="size-h-3 flex-s-c">
+                        <h5 class="f1-m-7 cl0">
+                            热门内容
+                        </h5>
+                    </div>
+
+                    <ul>
+                        {% for alm in hotAlbums(3) %}
+                        <li class="flex-wr-sb-s p-b-20">
+                            <a href="{{ path("album_show",{"id":alm.id}) }}" class="size-w-4 wrap-pic-w hov1 trans-03">
+                                <img src="{{ alm.pictures.0.webPath|imagine_filter('footer_img') }}" alt="IMG">
+                            </a>
+
+                            <div class="size-w-5">
+                                <h6 class="p-b-5">
+                                    <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+                                        {{ alm.name }}
+                                    </a>
+                                </h6>
+
+                                <span class="f1-s-3 cl6">
+										{{ alm.publishedAt|date("Y-m-d H:i:s") }}
+									</span>
+                            </div>
+                        </li>
+                            {% else %}
+                                <li class="flex-wr-sb-s p-b-20">暂无数据请等待...</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 p-b-20">
+                    <div class="size-h-3 flex-s-c">
+                        <h5 class="f1-m-7 cl0">
+                            友情链接
+                        </h5>
+                    </div>
+
+                    <ul class="m-t--12">
+                        {% for link in friendLinks()|slice(0,6) %}
+                        <li class="how-bor1 p-rl-5 p-tb-10">
+                            <a href="{{ link.link }}" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                                {{ link.siteName }}
+                            </a>
+                        </li>
+                            {% else %}
+                                <li class="how-bor1 p-rl-5 p-tb-10">没有链接</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg11">
+        <div class="container size-h-4 flex-c-c p-tb-15">
+            <span class="f1-s-1 cl0 txt-center">
+                {{ site.copyRight|raw }}
+            </span>
+        </div>
+    </div>
+</footer>

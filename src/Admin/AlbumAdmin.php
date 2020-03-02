@@ -12,8 +12,10 @@ namespace App\Admin;
 
 use App\Entity\Category;
 use App\Entity\Star;
+use App\Entity\Tags;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
+use Sonata\AdminBundle\Datagrid\ProxyQueryInterface;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
 use Sonata\Form\Type\CollectionType;
@@ -22,6 +24,17 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class AlbumAdmin extends AbstractAdmin
 {
+    public function configureBatchActions($actions)
+    {
+        if($this->hasRoute('list')){
+            $actions['publish']= [
+                'ask_confirmation' => true,
+                'label' => '发布',
+                //'call'
+            ];
+        }
+        return $actions;
+    }
 
     protected function configureListFields(ListMapper $list)
     {
@@ -29,6 +42,16 @@ class AlbumAdmin extends AbstractAdmin
             ->add("name",null,['label'=>'名称'])
             ->add('counterPictures',null,[
                 'label' => '照片数',
+            ])
+            ->add("category.name",null,['label'=>'类别'])
+            ->add("viewed",null,['label'=>'阅读量'])
+            ->add('publishedAt',null,[
+                'label'=>'发布时间',
+                'format'=>'Y年m月d日 H:i:s'
+            ])
+            ->add('createdAt',null,[
+                'label'=>'创建时间',
+                'format'=>'Y年m月d日 H:i:s'
             ])
         ;
     }
@@ -67,6 +90,12 @@ class AlbumAdmin extends AbstractAdmin
                 },
 
             ])
+            ->add('tags',ModelAutocompleteType::class,[
+                'label'=>'标签',
+                'property'=>'tags',
+                'multiple' => true,
+
+                ])
             ->add('pictures',CollectionType::class,[
                 //'sonata_admin' => PictureAdmin::class, //这个配置可有可无
                 'sonata_admin' => 'sonata.admin.imageSpecial', //这个配置可有可无
@@ -112,5 +141,7 @@ class AlbumAdmin extends AbstractAdmin
             }
         }
     }
+
+
 
 }

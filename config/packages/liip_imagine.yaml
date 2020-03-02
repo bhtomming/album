@@ -2,3 +2,60 @@
 liip_imagine:
     # valid drivers options include "gd" or "gmagick" or "imagick"
     driver: "gd"
+
+   # loaders:
+  #      default:
+  #          filesystem:
+  #              data_root: 'upload/images'
+
+    resolvers:
+        default:
+            web_path: ~
+
+    filter_sets:
+        cache: ~
+
+        thumb_img:
+            quality: 75
+
+            filters:
+                thumbnail: { size: [120, 90], mode: outbound }
+                background: { size: [124, 94], position: center, color: '#000000' }
+
+        light_thumb1:
+            filters:
+ #               downscale:
+ #                   max: [524:440]
+                thumbnail: { size: [524, 440], mode: outbound }
+
+        light_thumb2:
+            filters:
+                thumbnail: { size: [524,224], mode: outbound }
+
+        light_thumb3:
+            filters:
+                thumbnail: { size: [261,194], mode: outbound }
+
+        list_sm:
+            filters:
+                thumbnail: { size: [100,75], mode: outbound }
+
+        list_lg:
+            filters:
+                thumbnail: { size: [320,240], mode: outbound }
+
+        right_adv:
+            filters:
+                thumbnail: { size: [300,600], mode: outbound }
+
+        list_cl2:
+            filters:
+                thumbnail: { size: [320,180], mode: outbound }
+
+        footer_img:
+            filters:
+                thumbnail: { size: [80,60], mode: outbound }
+
+        mega_img:
+            filters:
+                thumbnail: { size: [160,120], mode: outbound }

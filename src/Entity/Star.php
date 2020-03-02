@@ -83,4 +83,27 @@ class Star
 
         return $this;
     }
+
+    public function getPublishedAlbums()
+    {
+        $albums = new ArrayCollection();
+        foreach ($this->getAlbums() as $album)
+        {
+            if($album->getIsPublished()){
+                $albums->add($album);
+            }
+        }
+        return $albums;
+    }
+
+    public function getPics()
+    {
+        $pics = 0;
+        foreach ($this->albums as $album)
+        {
+            $albumPic = $album->getPictures()->count();
+            $pics = $this->getAlbums()->count() * $albumPic;
+        }
+        return $pics;
+    }
 }

@@ -1,0 +1,62 @@
+<section class="bg0">
+    <div class="container">
+        <div class="row m-rl--1">
+            {% for album in albums|slice(0,4) %}
+
+            {% if loop.first %}
+                {% set warp_class = "col-md-6" %}
+                {% set img_class = "size-a-3" %}
+                {% set flex_class = "p-tb-20" %}
+                {% set h3_class = "m-b-10" %}
+                {% set h3a_class = "size-a-6 f1-l-1" %}
+            {% elseif loop.index==2 %}
+                {% set warp_class = "col-12" %}
+                {% set img_class = "size-a-4 how1" %}
+                {% set flex_class = "p-tb-24" %}
+                {% set h3_class = "m-b-14" %}
+                {% set h3a_class = "size-a-7 f1-l-2" %}
+            {% else %}
+                {% set warp_class = "col-sm-6" %}
+                {% set img_class = "size-a-5" %}
+                {% set flex_class = "p-tb-20" %}
+                {% set h3_class = "m-b-14" %}
+                {% set h3a_class = "size-h-1 f1-m-1" %}
+            {% endif %}
+
+            {% if loop.index == 2 %}
+            <div class="col-md-6 p-rl-1">
+                <div class="row m-rl--1">
+                {% endif %}
+            <div class="{{ warp_class }} p-rl-1 p-b-2">
+                <div class="bg-img1 {{ img_class }} how1 pos-relative" style="background-image: url({{ album.pictures.0.webpath|imagine_filter('light_thumb1') }});">
+                    <a href="{{ path('album_show',{id: album.id}) }}" class="dis-block how1-child1 trans-03"></a>
+
+                    <div class="flex-col-e-s s-full p-rl-25 p-tb-20">
+                        <a href="{{ path('category_show',{'id':album.category.id}) }}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+                            {{ album.category.name }}
+                        </a>
+
+                        <h3 class="how1-child2 m-t-14 {{ h3_class }}">
+                            <a href="{{ path('album_show',{'id':album.id}) }}" class="how-txt1 {{ h3a_class }} cl0 hov-cl10 trans-03">
+                                {{ album.name }}
+                            </a>
+                        </h3>
+
+                        {% if loop.first %}
+                        <span class="how1-child2">
+								<span class="f1-s-3 cl11">
+									{{ album.publishedAt|date("Y-m-d H:i:s") }}
+								</span>
+							</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% if loop.last %}
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

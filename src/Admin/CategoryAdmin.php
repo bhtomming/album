@@ -63,4 +63,9 @@ class CategoryAdmin extends AbstractAdmin
         ]);
     }
 
+    public function preRemove($object)
+    {
+        $object->removeCategory();
+    }
+
 }

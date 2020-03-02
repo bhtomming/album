@@ -1,0 +1,16 @@
+<ul class="main-menu">
+    {% for menu in mainMenu.items %}
+        {% if menu.parent == null %}
+    <li class="{{ menu.hasMega ? "mega-menu-item":"menu-item" }}">
+        <a href="{{ menu.link }}">{{ menu.name }}</a>
+        {% if menu.hasMega %}
+            {{ include("default/sub_mega_menu.html.twig",{sub_menues : menu.menuItems }) }}
+            {% else %}
+                {{ include("default/sub_menu.html.twig",{sub_menues : menu.menuItems}) }}
+        {% endif %}
+    </li>
+        {% endif %}
+        {% else %}
+    {% endfor %}
+
+</ul>

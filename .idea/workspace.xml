@@ -1,35 +1,559 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/templates/album/show.html.twig" line="68" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="21723ef1-a582-4458-9691-ea7f2d678929" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Admin/AlbumAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/FriendshipAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/LexiconAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/MetaAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/NavigationAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/PictureAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/ScriptAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/SettingsAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/StarAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/TagsAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servers/Cat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/breadcrumb.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/object.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1212_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner_m_0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/MenuItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/MenuItemRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/MenuRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/blog-detail-01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/blog-detail-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/blog-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/blog-list-01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/blog-list-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/category-01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/category-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/css/util.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/css/util.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-Hairline.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-HairlineItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/Lato-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Lato/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/Roboto/Roboto-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fa-brands.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fa-brands.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fa-regular.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fa-regular.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fa-solid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fa-solid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fontawesome-all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fontawesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/css/fontawesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/js/fontawesome-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/home-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/home-03.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/banner-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/banner-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/banner-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-detail-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-list-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-list-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-list-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-list-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-list-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/blog-list-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/entertaiment-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/icons/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/icons/icon-night.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/icons/logo-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/icons/logo-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/latest-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/latest-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/latest-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/latest-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/latest-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/latest-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/popular-post-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/popular-post-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/popular-post-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/popular-post-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/popular-post-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/popular-post-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/post-50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/images/video-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/animsition/css/animsition.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/animsition/css/animsition.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/animsition/js/animsition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/animsition/js/animsition.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/bootstrap/js/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/HTML5_Blank_Demo_Template/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/01_HomePage_v1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/02_HomePage_v2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/03_HomePage_v3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/04_CategoryPage_v1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/05_CategoryPage_v2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/06_Blog_Grid_With_Sidebar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/07_Blog_List_With_Sidebar_v1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/08_Blog_List_With_Sidebar_v2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/09_Blog_Details_With_Sidebar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/10_Blog_Details_No_Sidebar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/11_About.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/12_Contact.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/IMG_Previews/Megamenu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/blog-detail-01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/blog-detail-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/blog-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/blog-list-01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/blog-list-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/category-01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/category-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/css/util.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/css/util.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-Hairline.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-HairlineItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/Lato-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Lato/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/Roboto/Roboto-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fa-brands.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fa-brands.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fa-regular.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fa-regular.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fa-solid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fa-solid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fontawesome-all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fontawesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/css/fontawesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/js/fontawesome-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/fontawesome-5.0.8/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/home-02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/home-03.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/banner-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/banner-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/banner-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-detail-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-list-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-list-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-list-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-list-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-list-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/blog-list-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/entertaiment-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/icons/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/icons/icon-night.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/icons/logo-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/icons/logo-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/latest-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/latest-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/latest-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/latest-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/latest-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/latest-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/popular-post-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/popular-post-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/popular-post-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/popular-post-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/popular-post-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/popular-post-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/post-50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/images/video-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/animsition/css/animsition.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/animsition/css/animsition.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/animsition/js/animsition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/animsition/js/animsition.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/bootstrap/js/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/magnews2/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/album.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/album.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/kpm_menu.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/kpm_menu.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AlbumAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/AlbumAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/MenuAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/MenuAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/MenuItemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/MenuItemAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/MetaAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/MetaAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/SettingsAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/SettingsAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/TaskAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/TaskAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CatCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CatCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlbumAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlbumAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlbumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlbumController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FriendshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FriendshipController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/StarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TaskAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskAdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Album.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Album.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Friendship.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Friendship.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Picture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Picture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Star.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Star.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/MenuBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MenuBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AlbumRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AlbumRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CrawlerCacheRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CrawlerCacheRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servers/Cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servers/Cat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Twig/AppExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twig/AppExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CRUD/list_action_start.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CRUD/list_action_start.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/album/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/album/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/album/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/album/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/breadcrumb.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/breadcrumb.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/height-light.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/height-light.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/height-main-right.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/height-main-right.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/height-main.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/height-main.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/height_main_left.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/height_main_left.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/item_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/item_category.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/menu_item.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/menu_item.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/mobile-menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/mobile-menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/new_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/new_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/notice.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/notice.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/right-star.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/right-star.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/sub_mega_menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/sub_mega_menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/sub_menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/sub_menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/star/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/star/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tags/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tags/show.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,66 +567,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Servers/Cat.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
-              <folding>
-                <element signature="e#144#165#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="1242">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/menu_item.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Admin/PictureAdmin.php">
+        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="108">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Picture.php">
+        <entry file="file://$PROJECT_DIR$/templates/default/menu.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2854">
-              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-              <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/AlbumAdmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/doctrine/persistence/lib/Doctrine/Common/Persistence/ObjectRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+            <state relative-caret-position="189">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>#17b978</find>
+      <find>&lt;img src=&quot;</find>
+      <find>end</find>
+      <find>sub_cate</find>
+      <find>etAl</find>
+      <find>PAGE</find>
+      <find>echo</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,32 +624,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
-        <option value="$PROJECT_DIR$/config/packages/translation.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Star.php" />
-        <option value="$PROJECT_DIR$/src/Admin/StarAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Album.php" />
-        <option value="$PROJECT_DIR$/src/Admin/SettingsAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Admin/NavigationAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Friendship.php" />
-        <option value="$PROJECT_DIR$/src/Admin/MetaAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Admin/ScriptAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Admin/LexiconAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Admin/TagsAdmin.php" />
-        <option value="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
-        <option value="$PROJECT_DIR$/src/Admin/FriendshipAdmin.php" />
+        <option value="$PROJECT_DIR$/templates/default/pagerfanta.html.twig" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Task.php" />
-        <option value="$PROJECT_DIR$/src/Entity/CrawlerCache.php" />
+        <option value="$PROJECT_DIR$/src/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/templates/star/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/default/height-light.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/FriendshipController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/StarController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/MetaAdmin.php" />
+        <option value="$PROJECT_DIR$/templates/default/breadcrumb.html.twig" />
+        <option value="$PROJECT_DIR$/templates/default/notice.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
+        <option value="$PROJECT_DIR$/templates/CRUD/list_action_start.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/TaskAdminController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/TaskAdmin.php" />
+        <option value="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" />
         <option value="$PROJECT_DIR$/src/Command/CatCommand.php" />
         <option value="$PROJECT_DIR$/src/Repository/CrawlerCacheRepository.php" />
+        <option value="$PROJECT_DIR$/templates/default/right-content.html.twig" />
+        <option value="$PROJECT_DIR$/templates/default/right-star.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Task.php" />
         <option value="$PROJECT_DIR$/src/Servers/Cat.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Picture.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AlbumAdminController.php" />
+        <option value="$PROJECT_DIR$/templates/default/tab-item.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Category.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Star.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Tags.php" />
+        <option value="$PROJECT_DIR$/templates/default/height-main-right.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/TagsController.php" />
         <option value="$PROJECT_DIR$/src/Admin/AlbumAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Admin/PictureAdmin.php" />
+        <option value="$PROJECT_DIR$/templates/default/left-content.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AlbumController.php" />
+        <option value="$PROJECT_DIR$/templates/default/item_category.html.twig" />
+        <option value="$PROJECT_DIR$/templates/default/height-main-left.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/CategoryController.php" />
+        <option value="$PROJECT_DIR$/templates/default/menu.html.twig" />
+        <option value="$PROJECT_DIR$/src/Twig/AppExtension.php" />
+        <option value="$PROJECT_DIR$/templates/default/sub_menu.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/MenuItem.php" />
+        <option value="$PROJECT_DIR$/templates/default/menu_item.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/liip_imagine.yaml" />
+        <option value="$PROJECT_DIR$/src/Admin/MenuItemAdmin.php" />
+        <option value="$PROJECT_DIR$/templates/default/sub_mega_menu.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Album.php" />
+        <option value="$PROJECT_DIR$/templates/default/new_content.html.twig" />
+        <option value="$PROJECT_DIR$/templates/album/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/category/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/tags/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/default/height_main_left.html.twig" />
+        <option value="$PROJECT_DIR$/templates/category/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/album/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
       </list>
     </option>
   </component>
@@ -266,6 +805,10 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/vendor/white-october/pagerfanta-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -282,6 +825,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,87 +836,54 @@
             <path>
               <item name="album" type="b2602c69:ProjectViewProjectNode" />
               <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="2019" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="album" type="b2602c69:ProjectViewProjectNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="album" type="b2602c69:ProjectViewProjectNode" />
               <item name="album" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="friendship" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="album" type="b2602c69:ProjectViewProjectNode" />
+              <item name="album" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="magnews2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="album" type="b2602c69:ProjectViewProjectNode" />
+              <item name="album" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/网站工作文件/专题/9月" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/docker/sf-api" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpStudy\WWW\album\templates" />
+      <recent name="D:\phpStudy\WWW\album\src\Resources" />
+      <recent name="D:\phpStudy\WWW\album\src\Controller" />
+      <recent name="D:\phpStudy\WWW\album\src\Admin" />
+      <recent name="D:\phpStudy\WWW\album\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpStudy\WWW\album\templates\default" />
+      <recent name="D:\phpStudy\WWW\album\src\Admin" />
+      <recent name="D:\phpStudy\WWW\album\public" />
+      <recent name="D:\phpStudy\WWW\album\public\assets" />
+      <recent name="D:\phpStudy\WWW\album" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -415,17 +926,42 @@
       <workItem from="1573781039565" duration="207000" />
       <workItem from="1574056436115" duration="17782000" />
       <workItem from="1574317891009" duration="17677000" />
-      <workItem from="1574846405782" duration="38677000" />
+      <workItem from="1574846405782" duration="49332000" />
+      <workItem from="1575260453517" duration="599000" />
+      <workItem from="1575266266677" duration="43293000" />
+      <workItem from="1575771217624" duration="76251000" />
+      <workItem from="1576143105640" duration="5738000" />
+      <workItem from="1576198329873" duration="19734000" />
+      <workItem from="1576289157413" duration="23490000" />
+      <workItem from="1576392351339" duration="595000" />
+      <workItem from="1576480934519" duration="43889000" />
+      <workItem from="1576729603643" duration="28611000" />
+      <workItem from="1576802123378" duration="1643000" />
+      <workItem from="1576986854382" duration="14284000" />
+      <workItem from="1577086318283" duration="11377000" />
+      <workItem from="1577151743590" duration="1969000" />
+      <workItem from="1577239452296" duration="1309000" />
+      <workItem from="1577583163858" duration="132000" />
+      <workItem from="1577698760586" duration="1023000" />
+      <workItem from="1577859211998" duration="596000" />
+      <workItem from="1578302498903" duration="3401000" />
+      <workItem from="1578366144818" duration="592000" />
+      <workItem from="1578465962835" duration="754000" />
+      <workItem from="1578533233842" duration="587000" />
+      <workItem from="1578540282065" duration="874000" />
+      <workItem from="1578627064730" duration="888000" />
+      <workItem from="1583134968147" duration="834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191699000" />
+    <option name="totallyTimeSpent" value="484817000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28091684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -438,7 +974,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" weight="0.3264642" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -450,199 +986,320 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/abc.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574393831_0.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394071_2.gif" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394071_0.gif" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_19.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_16.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_13.jpeg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_1.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_0.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_12.jpeg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_10.jpeg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_9.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_8.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/img/1574394132_7.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/upload/images/dh_7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/22/1574395246_0.jpg" />
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/dom-crawler/Crawler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="1061" column="20" selection-start-line="1061" selection-start-column="20" selection-end-line="1061" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190911093456.php" />
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191129090300.php" />
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191218030944.php" />
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191219083918.php" />
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191219092545.php" />
     <entry file="file://$PROJECT_DIR$/src/Entity/Star.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="548">
+          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/CrawlerCache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/CatCommand.php">
+    <entry file="file://$PROJECT_DIR$/templates/default/height-light.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/TagsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
-            <element signature="e#31#59#0#PHP" expanded="true" />
+            <element signature="e#34#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/EntityPersister.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Tags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="180" column="73" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="180" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/CrawlerCacheRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085487_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085486_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085485_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085484_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085484_0.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085483_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085482_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085481_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085436_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575085613_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575086355_2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575086355_1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575086355_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575096592_2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575096592_1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575096592_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575096595_0.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575096595_1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/images/2019/11/30/1575096595_2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/persistence/lib/Doctrine/Common/Persistence/ObjectRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servers/Cat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="405">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
-            <element signature="e#144#165#0#PHP" expanded="true" />
+            <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Picture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2854">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/AlbumAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
+        <state relative-caret-position="548">
+          <caret line="95" column="35" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/PictureAdmin.php">
+    <entry file="file://$PROJECT_DIR$/templates/default/height-main-right.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="432">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/item_category.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/Twig/MenuExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3773" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/Loader/LoaderInterface.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/Loader/ArrayLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-439">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/Integration/Symfony/RoutingExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/ItemInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11198">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/MenuFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/MenuItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13257">
+          <caret line="491" column="36" selection-start-line="491" selection-start-column="31" selection-end-line="491" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle/src/DependencyInjection/Compiler/MenuPass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle/src/Resources/doc/custom_renderer.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle/src/Resources/doc/custom_provider.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle/src/Resources/doc/menu_service.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/height-main.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1701" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/sub_menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Twig/AppExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
+          <folding>
+            <element signature="e#143#164#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servers/Cat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3699">
+          <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Picture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/item_tabs.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="278" column="21" lean-forward="true" selection-start-line="278" selection-start-column="21" selection-end-line="278" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/MenuItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="169" column="24" selection-start-line="169" selection-start-column="24" selection-end-line="169" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/col_3.html.twig" />
+    <entry file="file://$PROJECT_DIR$/templates/magnews2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1129">
+          <caret line="394" column="70" selection-start-line="394" selection-start-column="70" selection-end-line="394" selection-end-column="70" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#4;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/new_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/album/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="134" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tags/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/height_main_left.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/album/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/item_tags.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="28" selection-start-line="10" selection-start-column="16" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/MenuItemAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/liip_imagine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="791">
+          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/sub_mega_menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/menu_item.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
     </entry>

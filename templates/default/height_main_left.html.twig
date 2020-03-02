@@ -41,10 +41,10 @@
             <!-- Tab panes -->
             <div class="tab-content p-t-35">
                 <!-- - -->
-                {% for index,sub_cate in category.categories %}{{ dump(sub_cate) }}
-                    {#{{ include("default/item_tabs.html.twig",{"album_items" : sub_cate.publishedAlbums, "curr_cate" : sub_cate,"first" : loop.first, "tab_index" : tab_index, "tabp_index": loop.index }) }}#}
+                {% for index,sub_cate in category.categories %}
+                    {{ include("default/item_tabs.html.twig",{"album_items" : sub_cate.publishedAlbums, "curr_cate" : sub_cate,"first" : loop.first, "tab_index" : tab_index, "tabp_index": loop.index }) }}
                     {% else %}
-                        {#{{ include("default/item_tabs.html.twig",{"album_items" : category.publishedAlbums, "curr_cate" : category, "first" : true, "tab_index" : tab_index, "tabp_index": 1 }) }}#}
+                        {{ include("default/item_tabs.html.twig",{"album_items" : category.publishedAlbums, "curr_cate" : category, "first" : true, "tab_index" : tab_index, "tabp_index": 1 }) }}
                 {% endfor %}
             </div>
         </div>

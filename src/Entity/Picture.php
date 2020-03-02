@@ -172,8 +172,9 @@ class Picture
             return;
         }
 
+        $name = new \DateTime('now');
         $this->getFile()->move(
-            self::SERVER_PATH_TO_IMAGE_FOLDER,
+            self::SERVER_PATH_TO_IMAGE_FOLDER.date('Y',$name)."/".date('m',$name)."/".date('d',$name)."/",
             $this->getFile()->getClientOriginalName()
         );
         $this->name = $this->getFile()->getClientOriginalName();

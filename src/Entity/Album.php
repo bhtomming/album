@@ -40,7 +40,7 @@ class Album
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Star", inversedBy="albums")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $star;
 
@@ -49,9 +49,48 @@ class Album
      */
     private $pictures;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\MenuItem", inversedBy="mega",cascade={"persist"})
+     */
+    private $menuItem;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $publishedAt;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $viewed;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $summary;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $isPublished;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Tags", mappedBy="albums")
+     */
+    private $tags;
+
+
+
     public function __construct()
     {
         $this->pictures = new ArrayCollection();
+        $this->setCreatedAt(new \DateTime('now'));
+        $this->tags = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -155,4 +194,130 @@ class Album
     {
         return $this->pictures->count();
     }
+
+    public function getMenuItem(): ?MenuItem
+    {
+        return $this->menuItem;
+    }
+
+    public function setMenuItem(?MenuItem $menuItem): self
+    {
+        $this->menuItem = $menuItem;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getPublishedAt(): ?\DateTimeInterface
+    {
+        return $this->publishedAt;
+    }
+
+    public function setPublishedAt(?\DateTimeInterface $publishedAt): self
+    {
+        $this->publishedAt = $publishedAt;
+
+        return $this;
+    }
+
+    public function getViewed(): ?int
+    {
+        return $this->viewed;
+    }
+
+    public function setViewed(?int $viewed): self
+    {
+        $this->viewed = $viewed;
+
+        return $this;
+    }
+
+    public function addViewed()
+    {
+        $this->viewed++;
+
+        return $this;
+    }
+
+    public function getSummary(): ?string
+    {
+        return $this->summary;
+    }
+
+    public function setSummary(?string $summary): self
+    {
+        $this->summary = $summary;
+
+        return $this;
+    }
+
+    public function getIsPublished(): ?bool
+    {
+        return $this->isPublished;
+    }
+
+    public function setIsPublished(?bool $isPublished): self
+    {
+        $this->isPublished = $isPublished;
+
+        if($isPublished)
+        {
+            $this->setPublishedAt(new \DateTime('now'));
+        }
+
+        return $this;
+    }
+
+    public function getPicPath()
+    {
+        $pic = $this->getPictures()->get(random_int(0,$this->getPictures()->count()-1));
+        $times = $pic->getCreatedAt();
+        $dateDir = $times->format("Y")."/".$times->format("m")."/".$times->format("d");
+        return Picture::SERVER_PATH_TO_IMAGE_FOLDER.$dateDir."/".$pic->getName();
+    }
+
+    /**
+     * @return Collection|Tags[]
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    public function addTag(Tags $tag): self
+    {
+        if (!$this->tags->contains($tag)) {
+            $this->tags[] = $tag;
+            $tag->addAlbum($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tags $tag): self
+    {
+        if ($this->tags->contains($tag)) {
+            $this->tags->removeElement($tag);
+            $tag->removeAlbum($this);
+        }
+
+        return $this;
+    }
+
+
+
+
+
+
 }

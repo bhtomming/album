@@ -29,13 +29,13 @@ class CatCommand extends Command
         $this
             ->setDescription('Add a short description for your command')
             ->addArgument('arg1', InputArgument::OPTIONAL, 'Argument description')
-            ->addOption('list', null, InputOption::VALUE_NONE, 'Option description')
+            /*->addOption('list', null, InputOption::VALUE_NONE, 'Option description')
             ->addArgument('regular',InputArgument::OPTIONAL,'Input a regular')
             ->addOption('category', null, InputOption::VALUE_NONE, 'Category Option description')
             ->addOption('alt', null, InputOption::VALUE_NONE, 'ImageAlt Option description')
             ->addOption('tag', null, InputOption::VALUE_NONE, 'ImageTag Option description')
             ->addOption('image', null, InputOption::VALUE_NONE, 'Image Option description')
-            ->addOption('nav', null, InputOption::VALUE_NONE, 'Image Option description')
+            ->addOption('nav', null, InputOption::VALUE_NONE, 'Image Option description')*/
         ;
     }
 
@@ -44,22 +44,21 @@ class CatCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $arg1 = $input->getArgument('arg1');
 
-        $regular = $input->getArgument('regular');
+        //$regular = $input->getArgument('regular');
 
         $cat = $this->cat;
-        $cat->setUrl($arg1);
+        //$cat->setUrl($arg1);
 
         if ($arg1) {
             $io->note(sprintf('You passed an argument: %s', $arg1));
-        }
-
-        if($regular == 1){
-            $cat->testTask(1);
-            $cat->startTask();
+            $cat->testTask($arg1);
+            //$cat->startTask();
+            $io->note("完成");
             return 0;
         }
 
-        if ($input->getOption('nav')) {
+
+       /* if ($input->getOption('nav')) {
             $io->note('您下在获取网站导航:');
             //$lists = $cat->getList($regular);
             $navs = $cat->getNav($regular);
@@ -96,7 +95,7 @@ class CatCommand extends Command
             $io->note('你要获取图片：');
             $imgs = $cat->getImage($regular);
             $io->note($imgs);
-        }
+        }*/
 
         $io->success('run it success!');
 

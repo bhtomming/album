@@ -96,6 +96,11 @@ class Task
      */
     private $pagination;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $breadcrumb;
+
     public function __construct()
     {
         $this->setFinished(false);
@@ -249,6 +254,13 @@ class Task
     {
         $this->finished = $finished;
 
+        if($finished)
+        {
+            $this->setFinishedAt(new \DateTime('now'));
+        }else {
+            $this->setFinishedAt(null);
+        }
+
         return $this;
     }
 
@@ -296,6 +308,18 @@ class Task
     public function setPagination(?string $pagination): self
     {
         $this->pagination = $pagination;
+
+        return $this;
+    }
+
+    public function getBreadcrumb(): ?string
+    {
+        return $this->breadcrumb;
+    }
+
+    public function setBreadcrumb(?string $breadcrumb): self
+    {
+        $this->breadcrumb = $breadcrumb;
 
         return $this;
     }

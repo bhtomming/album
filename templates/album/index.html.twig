@@ -1,39 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Album index{% endblock %}
-
-{% block body %}
-    <h1>Album index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Keywords</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for album in albums %}
-            <tr>
-                <td>{{ album.id }}</td>
-                <td>{{ album.name }}</td>
-                <td>{{ album.keywords }}</td>
-                <td>{{ album.description }}</td>
-                <td>
-                    <a href="{{ path('album_show', {'id': album.id}) }}">show</a>
-                    <a href="{{ path('album_edit', {'id': album.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('album_new') }}">Create new</a>
+{% block notice %}
+    {{ include("default/notice.html.twig") }}
 {% endblock %}
+
+{% block height_light %}
+    {{ include("default/height-light.html.twig") }}
+{% endblock %}
+
+{% block main_sider %}
+    {{ include("default/height_main_left.html.twig",{'mainCates': mainCates |slice(0,5)}) }}
+    {{ include("default/new_content.html.twig",{'name': '最新内容','col':2,'albums': albums |sortBy('publishedAt','DESC')|slice(0,10)}) }}
+{% endblock %}
+
+{% block right_sider %}
+    {{ include("default/height-main-right.html.twig") }}
+    {{ include("default/item_tags.html.twig") }}
+{% endblock %}
+

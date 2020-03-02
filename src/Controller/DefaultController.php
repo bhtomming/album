@@ -10,7 +10,21 @@
 namespace App\Controller;
 
 
-class DefaultController
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
+
+/**
+ * @Route("/")
+ */
+class DefaultController extends AbstractController
 {
+
+    /**
+     * @Route("/", name="page_index", methods={"GET"})
+     */
+    public function index()
+    {
+        return $this->redirectToRoute("album_index");
+    }
 
 }

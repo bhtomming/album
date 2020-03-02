@@ -11,14 +11,14 @@ namespace App\Admin;
 
 
 
+
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Form\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Sonata\Form\Type\CollectionType;
 
 
-class MenuItemAdmin extends AbstractAdmin
+class MenuAdmin extends AbstractAdmin
 {
 
     protected function configureFormFields(FormMapper $form)
@@ -32,17 +32,14 @@ class MenuItemAdmin extends AbstractAdmin
                 'required'=>true,
                 'label'=>'菜单名'
             ])
-            ->add('link',null, [
-                'label'=>'链接'
-            ])
-            ->add('mega',CollectionType::class,[
+            ->add('items',CollectionType::class,[
                 //'sonata_admin' => PictureAdmin::class, //这个配置可有可无
-                'sonata_admin' => AlbumAdmin::class, //这个配置可有可无
+                'sonata_admin' => MenuItemAdmin::class, //这个配置可有可无
                 'type_options' => [
                     'delete' => true,
                     'btn_delete'=>true,
                 ],
-                'label'=>'相册'
+                'label'=>'菜单'
 
             ],
                 [
@@ -59,13 +56,24 @@ class MenuItemAdmin extends AbstractAdmin
         $list->addIdentifier('name','html',[
             'label'=>'菜单名',
         ])
-            ->add('link',null,[
-                'label' => '链接',
-            ])
         ;
-
     }
 
+    public function prePersist($object)
+    {
+        $items = $object->getItems();
+        //dump($object);exit;
+        foreach ($items as $item)
+        {
+            $item->setMenu($object);
+        }
+        //dump($object);exit;
+    }
+
+    public function preUpdate($object)
+    {
+
+    }
 
 
 }

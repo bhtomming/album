@@ -16,9 +16,9 @@ sonata_block:
 services:
     admin.album:
         class: App\Admin\AlbumAdmin
-        arguments: [ ~, App\Entity\Album, ~ ]
         tags:
             - { name: sonata.admin, manager_type: orm, label: '相册' }
+        arguments: [ ~, App\Entity\Album, App\Controller\AlbumAdminController ]
 
     admin.image:
         class: App\Admin\PictureAdmin
@@ -79,3 +79,21 @@ services:
         arguments: [~, App\Entity\Tags,~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: '标签管理' }
+
+    admin.menu_items:
+        class: App\Admin\MenuItemAdmin
+        arguments: [~, App\Entity\MenuItem,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '菜单条目' }
+
+    admin.menu:
+        class: App\Admin\MenuAdmin
+        arguments: [~, App\Entity\Menu,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '菜单管理' }
+
+    admin.task:
+        class: App\Admin\TaskAdmin
+        arguments: [~, App\Entity\Task ,App\Controller\TaskAdminController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: '采集任务' }

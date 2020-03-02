@@ -1,0 +1,31 @@
+
+<div class="p-t-50">
+    <div class="how2 how2-cl4 flex-s-c">
+        <h3 class="f1-m-2 cl3 tab01-title">
+            热门人物
+        </h3>
+    </div>
+
+    <ul class="p-t-35">
+        {% for star in stars|sortBy("desc","pics")|slice(0,10) %}
+            <li class="flex-wr-sb-c p-b-20">
+                <a href="{{ path("star_show",{"id":star.id}) }}" class="size-a-8 flex-c-c borad-3 size-a-8  fs-16 cl10 hov-cl10">
+                    <span class="fa fa-heart"></span>
+                </a>
+
+                <div class="size-w-3 flex-wr-sb-c">
+                    <a href="{{ path("star_show",{"id":star.id}) }}" class="f1-s-9 text-uppercase cl3 hov-cl10 trans-03">
+                        {{ star.name }}
+                    </a>
+
+                    <span class="f1-s-8 cl3 p-r-20">
+                            图片数:{{ star.pics }}
+                        </span>
+
+                </div>
+            </li>
+        {% else %}
+            <li class="flex-wr-sb-c p-b-20">没有人物数据</li>
+        {% endfor %}
+    </ul>
+</div>

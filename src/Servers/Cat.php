@@ -62,8 +62,15 @@ class Cat
     {
         $em = $this->getEm();
         $task = $em->getRepository(Task::class)->find($task);
-        //echo var_export($task,true);
+
+        $this->setUrl($task->getBaseUrl());
         $this->setTask($task);
+
+        $this->startTask();
+
+        //$this->setUrl("http://www.meituba.com/nanmingxing/28124.html");
+        //echo var_export($this->crawler->html());exit;
+        //$this->getImage("//div[@class='swiper-slide']/img");
     }
 
     public function setTask(Task $task)
@@ -78,63 +85,112 @@ class Cat
 
     public function startTask()
     {
-        $navs = $this->getNav();
+        $navs = $this->getNav();//抓取导航菜单的链接
+
+        $this->fixTags($this->getTags());  //抓取标签并导入库
+        $this->fixCategories($this->getCategory());
+        $lists = $this->getList();
+        $this->getPages();
 
         if(!empty($navs))
         {
-            foreach ($navs as $nav)
+            foreach ($navs as $nav) //循环抓取导航内详情页面的链接
             {
                 $this->setUrl($nav);
+                $this->getStar();
+                $this->getTags();
+                $this->getCategory();
                 $this->getPages();
+                $this->updateCache();
+                echo "循环导航\n";
+            }
+        }
+        if(!empty($lists))
+        {
+            foreach ($lists as $list)
+            {
+                $this->setUrl($list);
+                $this->getStar();
+                $this->getTags();
+                $this->getCategory();
+                $this->getPages();
+                $this->updateCache();
+                echo "循环列表\n";
             }
         }
         $em = $this->getEm();
-        $cahes = $em->getRepository(CrawlerCache::class)->findBy(['task'=>$this->getTask()->getId(),'urlType'=>CrawlerCache::PAGE,'gather'=>false]);
-       //echo var_export($pages);
-        if(!empty($cahes))
+
+        while($cahes = $em->getRepository(CrawlerCache::class)->findBy(['task'=>$this->getTask()->getId(),'urlType'=>CrawlerCache::PAGE,'gather'=>false],[],50))
         {
-            foreach ($cahes as $cahe)
+            //echo var_export($pages);
+            if(!empty($cahes))
             {
-                $this->readPage($cahe->getUrl());
-
-                $paginations = $this->getPagination();
-                if(!empty($paginations))
+                echo "查询到".count($cahes)."条内容\n";
+                foreach ($cahes as $cahe)
                 {
-                    $this->isPagination = true;
-                    $paginations = array_unique($paginations);
+                    $this->readPage($cahe->getUrl());
 
-                    foreach ($paginations as $pagination)
+                    $paginations = $this->getPagination();
+                    if(!empty($paginations))//有分页则抓取分页内容
                     {
-                        $this->readPage($pagination);
-                        $this->isPagination = $pagination == end($paginations) ? false  : true;
+                        $this->isPagination = true;
+                        $paginations = array_unique($paginations);
+
+                        foreach ($paginations as $pagination)
+                        {echo "正在抓取分页内容\n";
+                            $this->readPage($pagination);
+                            $this->isPagination = $pagination == end($paginations) ? false  : true;
+                        }
                     }
                 }
-
             }
         }
+
+        $ucahes = $em->getRepository(CrawlerCache::class)->findBy(['task'=>$this->getTask()->getId(),'gather'=>false]);
+
+        if(empty($ucahes))  //完成所有链接的采集
+        {
+            $this->getTask()->setFinished(true);
+            $em->persist($this->task);
+            $em->flush();
+        }
+
 
     }
 
     public function readPage($url)
     {
         $this->setUrl($url);
-        $stars = $this->getStar();
 
-        $categories = $this->getCategory();
-        if(!$this->isPagination)
-        {
+        if(!$this->isPagination)//不是子页面的操作
+        {echo "正在抓取主要页面内容\n";
+            $em = $this->getEm();
+            $stars = $this->getStar();
+            $categories = $this->getCategory();
             $titles = $this->getTitle();
+
+            if(empty($titles))
+            {
+                $this->getPages();
+                return;
+            }
+            $breadcrumb = $this->getBreadcrumb();
             $tags = $this->getTags();
             $this->fixTags($tags);
-            $star = $this->fixStars($stars);
-            $category = $this->fixCategories($categories);
+            $this->fixStars($stars);
+            $this->fixCategories($categories);
             $this->album = new Album();
+            //file_put_contents("debug.txt",$this->crawler->html());
+            // file_put_contents("breadcrumb.txt",$breadcrumb);
+            $star = $em->getRepository(Star::class)->findOneBy(['name'=>$breadcrumb]);
+            $category = $em->getRepository(Category::class)->findOneBy(['name'=>$breadcrumb]);
             $this->album
                 ->setName($titles[0])
                 ->setCategory($category)
                 ->setStar($star)
             ;
-            echo "正在抓取文章：".$titles[0]."\n";
+
+            //echo "正在抓取文章：".$titles[0]."\n";
 
         }
         $files['name'] = $this->getImage();
@@ -142,7 +198,19 @@ class Cat
         $files['title'] = $this->getImageTitle();
 
         $this->fixPictures($files);
+        $this->updateCache();
 
+    }
+
+    public function getBreadcrumb($regular = null)
+    {
+        $regular = $regular != null ? : $this->task->getBreadcrumb();
+        $breadcrumbs = $this->toLink($regular);
+        if(empty($breadcrumbs))
+        {
+            return null;
+        }
+        return $breadcrumbs[0];
     }
 
     public function fixPictures($files)
@@ -156,7 +224,7 @@ class Cat
                 $picture->setName($name);
                 if(!empty($files['alt']))
                 {
-                    $picture->etAlt($files['alt'][$index]);
+                    $picture->setAlt($files['alt'][$index]);
                 }
                 if(!empty($files['title']))
                 {
@@ -175,6 +243,7 @@ class Cat
         $star = null;
         if(!empty($names))
         {
+            $names = array_values(array_unique(array_filter($names)));
             $em = $this->getEm();
             foreach ($names as $name)
             {
@@ -199,6 +268,7 @@ class Cat
         $cate = null;
         if(!empty($categories))
         {
+            $categories = array_values(array_unique(array_filter($categories)));
             $em = $this->getEm();
             foreach ($categories as $category)
             {
@@ -221,6 +291,7 @@ class Cat
     {
         if(!empty($names))
         {
+            $names = array_values(array_unique(array_filter($names)));
             $em = $this->getEm();
             foreach ($names as $name)
             {
@@ -243,7 +314,7 @@ class Cat
             $regular = $this->getTask()->getNav();
 
         }
-        $navs = $this->toLink($regular,'href');
+        $navs = array_values(array_unique(array_filter($this->toLink($regular,'href'))));
 
         $this->saveCahe($navs,CrawlerCache::NAV);
 
@@ -256,7 +327,7 @@ class Cat
         {
             $regular = $this->getTask()->getPagination();
         }
-        $paginations = $this->toLink($regular,'href');
+        $paginations = array_values(array_unique(array_filter($this->toLink($regular,'href'))));
 
         return $paginations;
     }
@@ -268,7 +339,7 @@ class Cat
         {
             $regular = $this->getTask()->getList();
         }
-        $this->lists = $this->toLink($regular,'href');
+        $this->lists = array_values(array_unique(array_filter($this->toLink($regular,'href'))));
 
         $this->saveCahe($this->lists,CrawlerCache::LIST);
 
@@ -410,11 +481,39 @@ class Cat
         $name = time();
         $path = "public/".Picture::SERVER_PATH_TO_IMAGE_FOLDER.date('Y',$name)."/".date('m',$name)."/".date('d',$name)."/";
         $fileNames = [];
+        if(!$fileSystem->exists($path))
+        {
+            $fileSystem->mkdir($path);
+        }
         foreach ($imgs as $index => $img)
         {
+            if($fileSystem->readlink($img))
+            {
+                echo "\n无法获取文件:".$img;
+                continue;
+            }
+
             $exten = substr($img,strrpos($img,"."));
             $fileNames[] = $name."_".$index.$exten;
-            $fileSystem->copy($img,$path.$fileNames[$index]);
+            echo "\n正在获取图片:".$img;
+
+            $ch = curl_init(); //初始化
+            curl_setopt($ch, CURLOPT_URL, $img); //你要访问的页面
+            curl_setopt($ch, CURLOPT_REFERER, $this->baseUrl); //伪造来路页面
+            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1); //是否显示内容
+            $return_content = curl_exec ( $ch );
+            echo var_export(curl_error($ch));
+            curl_close($ch); //返回关闭
+
+            $fp= @fopen($path.$fileNames[$index],"wb"); //将文件绑定到流
+            if($fp == false)
+            {
+                file_put_contents("var/log/img_err.log",$return_content);
+            }else{
+                fwrite($fp,$return_content); //写入文件
+            }
+
+            //$fileSystem->copy($img,$path.$fileNames[$index],true);
         }
         return $fileNames;
     }
@@ -433,13 +532,20 @@ class Cat
         return $Pages;
     }
 
+    //获取内容详情页面的链接
     public function getPages($regular = null)
     {
         if($regular == null && $this->task)
         {
-            $regular = $this->getTask()->getList();
+            $regular = $this->getTask()->getPage();
         }
-        $Pages = $this->toLink($regular,'href');
+        $Pages = array_values(array_unique(array_filter($this->toLink($regular,'href'),function($var){
+            if(preg_match('/.*?\.(php|htm|html|asp)$/isU', $var) != 0 )
+            {
+                return $var;
+            }
+        })));
+        //echo var_export($Pages);exit;
 
         $this->saveCahe($Pages,CrawlerCache::PAGE);
         //$this->updateCache();
@@ -450,8 +556,13 @@ class Cat
     {
         $this->url = $url;
         $this->crawler = $this->client->request("GET",$url);
-        preg_match('/[\w][\w-]*\.(?:com\.cn|com|cn|co|net|org|gov|cc|biz|info|me)(\/|$)/isU', $url, $domain);
-        $this->baseUrl = substr($this->url,0,strpos($this->url,":") + 1)."//".rtrim($domain[0],"/");
+
+        if($this->baseUrl == null)
+        {
+            preg_match('/[\w][\w-]*\.(?:com\.cn|com|cn|co|net|org|gov|cc|biz|info|me)(\/|$)/isU', $url, $domain);
+            $this->baseUrl = substr($this->url,0,strpos($this->url,":") + 1)."//".rtrim($domain[0],"/");
+        }
+
     }
 
     public function setLists($lists)
@@ -471,8 +582,8 @@ class Cat
                 return $node->text();
             }
             $src = $node->attr($attr);
-            if(empty($src)){
-                return "找不到内容";
+            if(empty($src) || $src == "#"){
+                return null;
             }
             if(strpos($src,"http") === 0){
                 return $src;
@@ -482,6 +593,11 @@ class Cat
             }else if(strpos($src,"/" )=== 0){
                 $src = $this->baseUrl.$src;
             }else{
+                if(preg_match('/.*?\.(php|htm|html|asp)$/isU', $this->url) != 0 )
+                {
+                    $src = substr($this->url,0,strrpos($this->url,'/') + 1).$src;
+                    return $src;
+                }
                 $src = $this->url.$src;
             }
             return $src;
@@ -535,7 +651,7 @@ class Cat
     private function updateCache()
     {
         $em = $this->getEm();
-        $caches = $em->getRepository(CrawlerCache::class)->findBy(['url',$this->url]);
+        $caches = $em->getRepository(CrawlerCache::class)->findBy(['url'=>$this->url]);
 
         if(!empty($caches)){
             foreach ($caches as $cache)
