@@ -1,0 +1,46 @@
+<div class="tab-pane fade {{ first ? "show active" }}" id="tab{{ tab_index }}-{{ tabp_index  }}" role="tabpanel">
+    <div class="row">
+        {% for sub_index,album in album_items |slice(0, 4) %}
+            {% if sub_index in [0,1] %}
+                <div class="col-sm-6 p-r-25 p-r-15-sr991">
+            {% endif %}
+            <!-- Item post -->
+            <div class="{{ sub_index != 0 ? "flex-wr-sb-s" }} m-b-30">
+                <a href="{{ path('album_show',{'id': album.id}) }}" class="{{ sub_index !=0 ? "size-w-1" }} wrap-pic-w hov1 trans-03">
+                    {% set imgfilter = "list_sm" %}
+                    {% if sub_index == 0 %}
+                        {% set imgfilter = "list_lg" %}
+                    {% endif %}
+                    <img src="{{ album.picPath|imagine_filter(imgfilter) }}" alt="IMG">
+                </a>
+
+                <div class="{{ sub_index == 0 ? "p-t-20" : "size-w-2" }}">
+                    <h5 class="p-b-5">
+                        <a href="{{ path('album_show',{'id': album.id}) }}" class="{{ sub_index == 0 ? "f1-m-3" : "f1-s-5" }} cl3 hov-cl10 trans-03">
+                            {{ album.name }}
+                        </a>
+                    </h5>
+
+                    <span class="cl8">
+                        <a href="{{ path('category_show',{'id':curr_cate.id}) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+                            {{ curr_cate.name }}
+                        </a>
+
+                        <span class="f1-s-3 m-rl-3">
+                            -
+                        </span>
+
+                        <span class="f1-s-3">
+                            {{ album.publishedAt|date("Y-m-d H:i:s") }}
+                        </span>
+                    </span>
+                </div>
+            </div>
+            {% if sub_index in [0,loop.last] %}
+                </div>
+            {% endif %}
+        {% else %}
+            该分类没有相册
+        {% endfor %}
+    </div>
+</div>

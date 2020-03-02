@@ -1,0 +1,83 @@
+<div class="sub-mega-menu">
+    <div class="nav flex-column nav-pills" role="tablist">
+        {% for cate in sub_menues %}
+        <a class="nav-link active" data-toggle="pill" href="#news-0" role="tab">{{ cate.name }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane show active" id="news-0" role="tabpanel"><!-- 最多五个项目 -->
+            <div class="row">
+                {% for cate_alb in first_albums %}
+                <div class="col-3">
+                    <!-- Item post -->
+                    <div>
+                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                            <img src="{{ cate_alb.pictures.[0] }}" alt="{{ cate_alb.pictures.[0].alt }}">
+                        </a>
+
+                        <div class="p-t-10">
+                            <h5 class="p-b-5">
+                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                    {{ cate_alb.name }}
+                                </a>
+                            </h5>
+
+                            <span class="cl8">
+                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                    {{ cate_alb.category }}
+                                </a>
+
+                                <span class="f1-s-3 m-rl-3">
+                                    -
+                                </span>
+
+                                <span class="f1-s-3">
+                                    {{ cate_alb.publishedAt }}
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="tab-pane" id="news-1" role="tabpanel">
+            <div class="row">
+                {% for cate_alb2 in first_albums2 %}
+                    <div class="col-3">
+                        <!-- Item post -->
+                        <div>
+                            <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                <img src="{{ cate_alb2.pictures.[0] }}" alt="{{ cate_alb2.pictures.[0].alt }}">
+                            </a>
+
+                            <div class="p-t-10">
+                                <h5 class="p-b-5">
+                                    <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                        {{ cate_alb2.name }}
+                                    </a>
+                                </h5>
+
+                                <span class="cl8">
+                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                    {{ cate_alb2.category }}
+                                </a>
+
+                                <span class="f1-s-3 m-rl-3">
+                                    -
+                                </span>
+
+                                <span class="f1-s-3">
+                                    {{ cate_alb2.publishedAt }}
+                                </span>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
